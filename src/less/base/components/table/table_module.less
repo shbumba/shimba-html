@@ -1,0 +1,62 @@
+.sh-table {
+    border-collapse: collapse !important;
+
+    th,
+    td {
+        padding:       12px 15px;
+        text-align:    inherit;
+        border-bottom: 1px solid @color-white;
+        background-color: @color-white;
+    }
+
+    th {
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    td {
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    &--s1 {
+        tr:nth-child(2n) td {
+            background-color: #f4f9ed;
+        }
+
+        th, td {
+            padding: 5px;
+        }
+
+        th {
+            padding-top: 8px;
+            padding-bottom: 0;
+            font-size: 16px;
+            line-height: 1.2;
+        }
+
+        td {
+            border-bottom: 1px solid #d4d3d4;
+        }
+
+        .th:first-child,
+        .td:first-child {
+            padding-left: 20px;
+        }
+
+        th:last-child,
+        td:last-child {
+            padding-right: 20px;
+        }
+    }
+}

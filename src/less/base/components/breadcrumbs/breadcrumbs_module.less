@@ -1,0 +1,19 @@
+.sh-breadcrumbs {
+    display: block;
+
+    &__list {
+        .inline-list();
+    }
+
+    &__item {
+        display: inline-block;
+    }
+
+    &__link {
+        text-decoration: none;
+        &:hover,
+        &--hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,308 @@
+//TODO adapted to BEM
+.module-animated-duration(@count, @start:1, @end:2, @i: 1) when (@i =< @count) {
+    //
+    //@end - final range
+    //@start - start range
+    //@count - number of entries
+    //@i - number of the current entry starting with "1"
+    //
+
+    @var_duration: (@end*(((((@end - @start)/(@count - 1))/@end)*(@i - 1)) + (@start / @end)));
+
+    &--s@{i} {
+        .animation-duration('@{var_duration}s');
+    }
+
+    .module-animated-duration(@count, @start, @end, (@i + 1));
+}
+
+.animated {
+    .animation-duration(1s);
+    .animation-fill-mode(both);
+    .module-animated-duration(@module-animated_durations-count, @module-animated_durations-start, @module-animated_durations-end);
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        .transform(scale3d(1, 1, 1));
+    }
+
+    50% {
+        .transform(scale3d(1.05, 1.05, 1.05));
+    }
+
+    100% {
+        .transform(scale3d(1, 1, 1));
+    }
+
+}
+
+@keyframes pulse {
+    0% {
+        .transform(scale3d(1, 1, 1));
+    }
+
+    50% {
+        .transform(scale3d(1.05, 1.05, 1.05));
+    }
+
+    100% {
+        .transform(scale3d(1, 1, 1));
+    }
+
+}
+
+@-webkit-keyframes rubberBand {
+    0% {
+        .transform(scale3d(1, 1, 1));
+    }
+
+    40% {
+        .transform(scale3d(0.85, 1.15, 1));
+    }
+
+    50% {
+        .transform(scale3d(1.15, 0.85, 1));
+    }
+
+    65% {
+        .transform(scale3d(0.95, 1.05, 1));
+    }
+
+    75% {
+        .transform(scale3d(1.05, 0.95, 1));
+    }
+
+    100% {
+        .transform(scale3d(1, 1, 1));
+    }
+}
+
+@keyframes rubberBand {
+    0% {
+        .transform(scale3d(1, 1, 1));
+    }
+
+    40% {
+        .transform(scale3d(0.85, 1.15, 1));
+    }
+
+    50% {
+        .transform(scale3d(1.15, 0.85, 1));
+    }
+
+    65% {
+        .transform(scale3d(0.95, 1.05, 1));
+    }
+
+    75% {
+        .transform(scale3d(1.05, 0.95, 1));
+    }
+
+    100% {
+        .transform(scale3d(1, 1, 1));
+    }
+}
+
+@-webkit-keyframes swing {
+    20% {
+        .transform(rotate3d(0, 0, 1, 6deg));
+    }
+
+    40% {
+        .transform(rotate3d(0, 0, 1, -4deg));
+    }
+
+    60% {
+        .transform(rotate3d(0, 0, 1, 3deg));
+    }
+
+    80% {
+        .transform(rotate3d(0, 0, 1, -2deg));
+    }
+
+    100% {
+        .transform(rotate3d(0, 0, 1, 0deg));
+    }
+}
+
+@keyframes swing {
+    20% {
+        .transform(rotate3d(0, 0, 1, 6deg));
+    }
+
+    40% {
+        .transform(rotate3d(0, 0, 1, -4deg));
+    }
+
+    60% {
+        .transform(rotate3d(0, 0, 1, 3deg));
+    }
+
+    80% {
+        .transform(rotate3d(0, 0, 1, -2deg));
+    }
+
+    100% {
+        .transform(rotate3d(0, 0, 1, 0deg));
+    }
+}
+
+@-webkit-keyframes shake {
+    0%, 100% {
+        .transform(translate3d(0, 0, 0));
+    }
+
+    20%, 65% {
+        .transform(translate3d(-6px, 0, 0));
+    }
+
+    40%, 80% {
+        .transform(translate3d(6px, 0, 0));
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        .transform(translate3d(0, 0, 0));
+    }
+
+    20%, 65% {
+        .transform(translate3d(-6px, 0, 0));
+    }
+
+    40%, 80% {
+        .transform(translate3d(6px, 0, 0));
+    }
+}
+
+@-webkit-keyframes shakePulse {
+    0% {
+        .transform(perspective(400px) rotate3d(1, 0, 0, -40deg));
+    }
+
+    20% {
+        .transform(perspective(400px) rotate3d(1, 0, 0, 35deg));
+    }
+
+    40% {
+        .transform(perspective(400px) rotate3d(1, 0, 0, -30deg));
+    }
+
+    60% {
+        .transform(perspective(400px) rotate3d(1, 0, 0, 20deg));
+    }
+
+    80% {
+        .transform(perspective(400px) rotate3d(1, 0, 0, -10deg));
+    }
+
+    100% {
+        .transform(perspective(400px));
+    }
+}
+
+@keyframes shakePulse {
+    0% {
+        .transform(perspective(400px) rotate3d(1, 0, 0, -40deg));
+    }
+
+    20% {
+        .transform(perspective(400px) rotate3d(1, 0, 0, 35deg));
+    }
+
+    40% {
+        .transform(perspective(400px) rotate3d(1, 0, 0, -30deg));
+    }
+
+    60% {
+        .transform(perspective(400px) rotate3d(1, 0, 0, 20deg));
+    }
+
+    80% {
+        .transform(perspective(400px) rotate3d(1, 0, 0, -10deg));
+    }
+
+    100% {
+        .transform(perspective(400px));
+    }
+}
+
+@-webkit-keyframes tada {
+    0% {
+        .transform(scale3d(1, 1, 1));
+    }
+
+    10%, 20% {
+        .transform(scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg));
+    }
+
+    30%, 50%, 70%, 90% {
+        .transform(scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg));
+    }
+
+    40%, 60%, 80% {
+        .transform(scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg));
+    }
+
+    100% {
+        .transform(scale3d(1, 1, 1));
+    }
+}
+
+@keyframes tada {
+    0% {
+        .transform(scale3d(1, 1, 1));
+    }
+
+    10%, 20% {
+        .transform(scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg));
+    }
+
+    30%, 50%, 70%, 90% {
+        .transform(scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg));
+    }
+
+    40%, 60%, 80% {
+        .transform(scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg));
+    }
+
+    100% {
+        .transform(scale3d(1, 1, 1));
+    }
+}
+
+.tada, .tada:hover {
+    -webkit-animation-name: tada;
+    animation-name:         tada;
+}
+
+.shakePulse, .shakePulse:hover {
+    -webkit-backface-visibility: visible !important;
+    backface-visibility:         visible !important;
+    -webkit-animation-name:      shakePulse;
+    animation-name:              shakePulse;
+}
+
+.shake, .shake:hover {
+    -webkit-animation-name: shake;
+    animation-name:         shake;
+}
+
+.swing, .swing-hover:hover {
+    -webkit-transform-origin: top center;
+    -ms-transform-origin:     top center;
+    transform-origin:         top center;
+    -webkit-animation-name:   swing;
+    animation-name:           swing;
+}
+
+.rubberBand, .rubberBand-hover:hover {
+    -webkit-animation-name: rubberBand;
+    animation-name:         rubberBand;
+}
+
+.pulse, .pulse-hover:hover {
+    -webkit-animation-name: pulse;
+    animation-name:         pulse
+}

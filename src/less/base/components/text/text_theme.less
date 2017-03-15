@@ -1,0 +1,64 @@
+.sh-text {
+    &-none {
+        text-decoration: none;
+    }
+
+    &-through {
+        text-decoration: line-through;
+    }
+
+    &-ca {
+        text-align: center;
+    }
+
+    &-ra {
+        text-align: right;
+    }
+
+    &-la {
+        text-align: left;
+    }
+
+    &-inh {
+        color: inherit;
+
+        &-i {
+            color: inherit !important;
+        }
+    }
+
+    &-upper {
+        text-transform: uppercase;
+    }
+
+    &-vam {
+        vertical-align: middle;
+    }
+
+    &-nowrap {
+        white-space: nowrap;
+    }
+}
+
+.sh-link {
+    color:           inherit;
+    text-decoration: underline;
+
+    &:hover,
+    &--hover {
+        text-decoration: none;
+    }
+
+    &--invert {
+        text-decoration: none;
+        &:hover,
+        &--hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+input, select, textarea {
+    font-family: inherit;
+    font-size:   inherit;
+}

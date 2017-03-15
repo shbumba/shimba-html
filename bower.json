@@ -1,0 +1,41 @@
+{
+  "name": "shimba/shimba-html",
+  "description": "Shimba css/less framework",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [
+    "css",
+    "less",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "http://shimba.me",
+  "authors": [
+    "Vitaly Fomin"
+  ],
+  "license": "MIT",
+  "main": [
+    "src/less/bundle.less",
+    "src/less/ie_bundle.less",
+    "dist/less/bundle.css"
+  ],
+  "ignore": [
+    "/.*",
+    "_config.yml",
+    "dist/vendor/",
+	"src/vendor/",
+    "CNAME",
+    "composer.json",
+    "CONTRIBUTING.md",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.9.1 - 2",
+    "skeleton-js": "file://D:/Repositories/shimba/skeleton-js/.git"
+  }
+}

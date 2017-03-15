@@ -1,0 +1,22 @@
+//TODO add more vars!!
+.sh-generate-title-h(@n, @i: 1) when (@i =< @n) {
+    &--h@{i} {
+        font-size: ~"@{title-h@{i}}";
+    }
+    .sh-generate-title-h(@n, (@i + 1));
+}
+
+.sh-main-title {
+    line-height:     @title-h-line-height;
+    letter-spacing:  0;
+    padding:         2px 0;
+    margin:          2px 0;
+    text-decoration: none;
+    font-weight:     @font-weight-base;
+
+    a {
+        text-decoration: none;
+    }
+
+    .sh-generate-title-h(6);
+}

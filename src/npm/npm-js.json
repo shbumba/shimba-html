@@ -1,0 +1,7 @@
+[
+    "src/vendor/skeleton-js/src/shimba.js",
+    "src/vendor/skeleton-js/src/module/preloader/preloader.js",
+    "src/vendor/skeleton-js/src/module/events.js",
+    "src/vendor/skeleton-js/src/module/utilities.js",
+    "src/js/main.js"
+]

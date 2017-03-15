@@ -1,0 +1,19 @@
+.sh-init-checkbox {
+    &__checkbox {
+        width:          17px;
+        height:         17px;
+        position:       relative;
+        overflow:       hidden;
+        display:        inline-block;
+        vertical-align: middle;
+
+        &-input {
+            position: absolute;
+            left:     -100px;
+        }
+
+        &--checked {
+            background-position: 0 0;
+        }
+    }
+}

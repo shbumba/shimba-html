@@ -1,0 +1,36 @@
+code.sh,
+pre.sh {
+    font-family: @font-family-monospace;
+}
+
+code.sh {
+    padding:          2px 4px;
+    font-size:        90%;
+    color:            @code-color;
+    background-color: @code-bg;
+    border-radius:    @border-radius-base;
+}
+
+pre.sh {
+    display:          block;
+    padding:          ((@line-height-computed - 1) / 2);
+    margin:           0 0 (@line-height-computed / 2);
+    font-size:        (@font-size-base - 1);
+    line-height:      @line-height-base;
+    word-break:       break-all;
+    word-wrap:        break-word;
+    color:            @pre-color;
+    background-color: @pre-bg;
+    border:           1px solid @pre-border-color;
+    border-radius:    @border-radius-base;
+
+    code {
+        padding:          0;
+        font-size:        inherit;
+        color:            inherit;
+        white-space:      pre-wrap;
+        background-color: transparent;
+        border-radius:    0;
+    }
+}
+

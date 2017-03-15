@@ -1,0 +1,125 @@
+.sh-no {
+    &-margin {
+        margin: 0;
+
+        &--i {
+            margin: 0 !important;
+        }
+    }
+
+    &-padd {
+        padding: 0;
+
+        &--i {
+            padding: 0 !important;
+        }
+    }
+
+    &-bg {
+        background-color: transparent;
+
+        &--i {
+            background-color: transparent !important;
+        }
+    }
+
+    &-display {
+        display: none;
+
+        &--i {
+            display: none !important;
+        }
+    }
+}
+
+.sh-mrg {
+    &-ca {
+        margin: 0 auto;
+
+        &--i {
+            margin: 0 auto !important;
+        }
+    }
+    &-no-top {
+        margin-top: 0;
+
+        &--i {
+            margin-top: 0 !important;
+        }
+    }
+    &-no-bot {
+        margin-bottom: 0;
+
+        &--i {
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+.sh-fl {
+    &-left {
+        float: left;
+    }
+    &-right {
+        float: right;
+    }
+    &-none {
+        float: none;
+    }
+}
+
+.sh-clear {
+    clear:    both;
+    height:   0;
+    overflow: hidden;
+
+    &-fix {
+        &:after {
+            content:     ".";
+            display:     block;
+            clear:       both;
+            visibility:  hidden;
+            line-height: 0;
+            height:      0;
+            overflow:    hidden;
+        }
+    }
+
+    &-b {
+        clear: both;
+    }
+}
+
+.sh-submit {
+    cursor: pointer;
+}
+
+.sh-trans {
+    .transition(all .3s);
+}
+
+.sh-popup {
+    padding: 20px;
+}
+
+.sh-full-click {
+    position: absolute;
+    z-index:  500;
+    width:    100%;
+    height:   100%;
+    display:  block;
+    top:      0;
+    left:     0;
+}
+
+.sh-overlay {
+    position:   fixed;
+    top:        0;
+    left:       0;
+    bottom:     0;
+    right:      0;
+    overflow:   hidden;
+    display:    none;
+    z-index:    900;
+    background: url("@{images-base}/overlay.png");
+}

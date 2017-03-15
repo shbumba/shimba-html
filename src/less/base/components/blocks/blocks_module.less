@@ -1,0 +1,38 @@
+.sh-blocks {
+    .inline-list();
+
+    display: block;
+    width:   100%;
+
+    &__row {
+        display: block;
+        clear:   both;
+
+        &--table {
+            display: table-row;
+            width:   100%;
+        }
+    }
+
+    &__item {
+        vertical-align: top;
+        white-space:    normal;
+        display:        inline-block;
+
+        &--top {
+            vertical-align: top;
+        }
+
+        &--middle {
+            vertical-align: middle;
+        }
+
+        &--bottom {
+            vertical-align: bottom;
+        }
+
+        &--table {
+            display: table-cell;
+        }
+    }
+}

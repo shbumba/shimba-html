@@ -1,0 +1,103 @@
+.sh-form {
+    .sh-form {
+        &__input,
+        &__textarea,
+        &__text,
+        &__select {
+            border:        1px solid transparent;
+            margin-bottom: 10px;
+            padding:       4px 10px;
+        }
+
+        &__input {
+            &--text,
+            &--file,
+            &--email,
+            &--password {
+                width: 100%;
+            }
+
+            &--submit {
+                display:       table;
+                float:         left;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__textarea,
+        &__select {
+            width: 100%;
+        }
+
+        &__label {
+            display:       block;
+            margin-bottom: 5px;
+        }
+
+        &__captcha {
+            display: table;
+
+            &--error {
+
+            }
+
+            &__image {
+                float: left;
+            }
+
+            &__input {
+                float:         left;
+                width:         112px;
+                margin-left:   8px;
+                margin-bottom: 0;
+                margin-top:    2px;
+            }
+        }
+
+        &__require-info {
+            display:       table;
+            float:         left;
+            margin-bottom: 10px;
+            padding:       2px 5px;
+        }
+
+        &__date-block {
+            position: relative;
+
+            a {
+                float: left;
+                position: absolute;
+                top: 21px;
+                left: 0;
+                padding: 8px 8px;
+
+                img {
+                    display: block;
+                }
+            }
+
+            input{
+                padding-left: 28px;
+            }
+
+            .calendar-icon {
+                float: left;
+                position: absolute;
+                padding: 6px 4px 5px;
+                box-sizing: content-box;
+                left: -1px;
+                top: 20px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+        }
+
+        &__submit {
+
+        }
+
+        &__errors {
+
+        }
+    }
+}

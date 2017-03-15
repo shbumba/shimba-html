@@ -1,0 +1,110 @@
+//TODO add more vars!!
+.sh-form {
+    .sh-form {
+        .input_error() {
+            &--error {
+                border: 1px solid #de2523;
+            }
+        }
+
+        &__label {
+            font-size:   14px;
+            font-weight: normal;
+            color:       #656565;
+        }
+
+        &__require-info {
+            font-style: italic;
+        }
+
+        &__input,
+        &__input--text,
+        &__input--file,
+        &__input--email,
+        &__input--password,
+        &__textarea,
+        &__select {
+            background-color: #ffffff;
+            .input_error();
+        }
+
+        &__input {
+            &--disabled {
+                background-color: #c5c5c5;
+                border:           1px solid silver;
+                cursor:           no-drop;
+                color:            #000;
+            }
+
+            &--required {
+
+            }
+
+            &--style-1 {
+                background-color: #fff;
+                border: 3px solid #e5e5e5;
+                padding: 11px 21px;
+            }
+            &--submit {
+                display:       inline-block;
+                background-color: #0099e0;
+                color:         #ffffff;
+                font-size:     24px;
+                padding: 15px 40px 11px;
+                line-height: 1;
+
+                float:         none;
+                margin-bottom: 15px;
+                margin-top:    10px;
+                border:        none;
+                box-shadow:    none;
+            }
+            &--error,
+            &--email--error,
+            &--file--error,
+            &--password--error,
+            &--text--error {
+                border: 3px solid #de2523;
+            }
+        }
+
+        &__textarea {
+            &--style-1 {
+                background-color: #fff;
+                border: 3px solid #e5e5e5;
+                padding: 11px 21px;
+            }
+            &--error {
+                border: 3px solid #de2523;
+            }
+        }
+
+        &__captcha {
+            display: inline-block;
+            vertical-align: top;
+            position: absolute;
+            left: 0;
+
+            &__input {
+                margin-left: 20px;
+                padding: 5px 21px;
+                margin-top: 0;
+            }
+        }
+
+        &__date-block {
+            .calendar-icon {
+                top: 1px;
+            }
+        }
+
+        &__submit {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        &__errors {
+            color: red;
+        }
+    }
+}

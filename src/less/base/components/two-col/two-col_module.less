@@ -1,0 +1,36 @@
+.sh-two-col {
+    display: block;
+    .inline-list();
+
+    &__col {
+        display: inline-block;
+        vertical-align: top;
+        width:   50%;
+
+        &--sell {
+            display: table-cell;
+        }
+
+        &--sidebar {
+            width: 18%;
+
+            &--left {
+                margin-right: 4%;
+            }
+
+            &--right {
+                margin-left: 4%;
+            }
+        }
+
+        &--page-container {
+            width: 78%;
+        }
+    }
+
+    &__block {
+        color:       @color-base;
+        font-size:   @font-size-base;
+        line-height: @line-height-base;
+    }
+}

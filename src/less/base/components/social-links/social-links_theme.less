@@ -1,0 +1,50 @@
+//TODO add more vars!!
+.sh-social-links {
+    &__vk,
+    &__tw,
+    &__fb,
+    &__gp {
+        width:             33px;
+        height:            33px;
+
+        .transition(all 0.4s ease-in-out 0s);
+
+        background-image:  url("@{images-base}/socio.png");
+        background-repeat: no-repeat;
+    }
+
+    &__vk {
+        background-position: 0 0;
+        &:hover,
+        &--hover {
+            background-position: 0 -33px;
+        }
+
+    }
+
+    &__tw {
+        background-position: -66px 0;
+        &:hover,
+        &--hover {
+            background-position: -66px -33px;
+        }
+
+    }
+
+    &__fb {
+        background-position: -33px 0;
+        &:hover,
+        &--hover {
+            background-position: -33px -33px;
+        }
+
+    }
+
+    &__gp {
+        background-position: -99px 0;
+        &:hover,
+        &--hover {
+            background-position: -99px -33px;
+        }
+    }
+}

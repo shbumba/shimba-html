@@ -1,0 +1,143 @@
+//TODO add more vars!!
+//Base
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin:  0;
+    padding: 0;
+    border:  0;
+}
+
+html {
+    font-size:                100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust:     100%;
+}
+
+html, body {
+    width:              100%;
+    height:             100%;
+    min-height:         100% !important;
+    position:           relative;
+    display:            table;
+    min-width:          100% !important;
+    box-sizing:         border-box;
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html, body, button, input, select, textarea {
+    font-family: @font-family-base;
+    color:       @color-base;
+    font-size:   @font-size-input;
+    line-height: @line-height-input;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+    display: block;
+}
+
+audio, canvas, video {
+    display:  inline-block;
+    *display: inline;
+    *zoom:    1;
+}
+
+nav {
+    position: relative;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+div {
+    text-align: inherit;
+}
+
+[hidden] {
+    display: none;
+}
+
+button.submit {
+    background-color: transparent;
+    padding:          0;
+    border:           none;
+    overflow:         visible;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border:  none;
+}
+
+b,
+.bold {
+    font-weight: @font-weight-bold;
+}
+
+strong {
+    text-transform: uppercase;
+}
+
+hr {
+    border: 1px solid @color-black;
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+a {
+    color: @color-link;
+
+    &[href]:not([class]) {
+        color: @color-link;
+        text-decoration: underline;
+    }
+
+    &:hover {
+        cursor:          pointer;
+        text-decoration: none;
+    }
+
+    img {
+        border: none;
+    }
+}
+
+.sh-text {
+    &-italic {
+        font-style: italic;
+    }
+
+    &-normal {
+        font-style: normal;
+    }
+
+    &-blue {
+        color: @color-blue;
+    }
+
+    &-white {
+        color: @color-white;
+    }
+
+    &-black {
+        color: @color-black;
+    }
+
+    &-grey {
+        color: @color-gray;
+    }
+}
